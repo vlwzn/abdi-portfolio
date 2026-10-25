@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Dashboard | 5S.MOTION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/admin.css" />
+  </head>
+  <body class="cms-page">
+    <aside class="sidebar">
+      <div>
+        <a class="sidebar-brand" href="/" aria-label="5S.MOTION home">
+          <img src="/assets/logo/logo-white.svg" alt="" width="38" height="49" />
+          <span>STUDIO / ADMIN</span>
+        </a>
+        <nav class="side-nav" aria-label="CMS sections">
+          <button type="button" class="nav-item is-active" data-section="dashboard">
+            <span class="nav-icon" aria-hidden="true">▦</span> Dashboard
+          </button>
+          <p class="nav-caption">Kelola konten</p>
+          <button type="button" class="nav-item" data-section="home"><span class="nav-icon">⌂</span> Beranda</button>
+          <button type="button" class="nav-item" data-section="projects"><span class="nav-icon">▱</span> Proyek <span class="nav-count" data-count="projects"></span></button>
+          <button type="button" class="nav-item" data-section="about"><span class="nav-icon">♙</span> Tentang &amp; keahlian</button>
+          <button type="button" class="nav-item" data-section="services"><span class="nav-icon">▱</span> Layanan <span class="nav-count" data-count="services"></span></button>
+          <button type="button" class="nav-item" data-section="team"><span class="nav-icon">♧</span> Tim <span class="nav-count" data-count="team"></span></button>
+          <div class="nav-separator"></div>
+          <button type="button" class="nav-item" data-section="settings"><span class="nav-icon">☷</span> Pengaturan situs</button>
+          <p class="nav-subnote">Kontak &amp; tautan sosial</p>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip">
+          <strong>▧ &nbsp; Ruang untuk berkarya.</strong>
+          <span>Simpan sebagai draf, tinjau, lalu terbitkan ke website.</span>
+        </div>
+        <div class="admin-identity">
+          <span class="avatar">A</span>
+          <div><strong>Admin website</strong><span>Pemilik</span></div>
+          <button type="button" class="icon-button logout-button" aria-label="Sign out" title="Sign out">↪</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <div class="breadcrumb"><span>☷</span><span>›</span><span>Admin</span><span>›</span><strong id="breadcrumb-title">Dashboard</strong></div>
+        <div class="topbar-actions"><span class="environment-label">MODE DESAIN</span><img src="/assets/logo/logo-white.svg" alt="5S.MOTION" width="25" height="32" /></div>
+      </header>
+      <main class="dashboard-content">
+        <div class="page-heading">
+          <div><p class="eyebrow">Ruang kerja konten</p><h1 id="page-title">Dashboard</h1><p class="page-description" id="page-description">Kelola karya, cerita, dan wajah studio dalam satu tempat.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="/" target="_blank" rel="noreferrer">↗ &nbsp; Lihat website</a><button class="button button-primary" type="button" id="create-project-button">＋ &nbsp; Tambah proyek</button></div>
+        </div>
+        <div id="content-area" aria-live="polite"></div>
+        <p class="dashboard-footnote">Content workspace <span>Konten tersimpan di database dan media disimpan di server.</span></p>
+        <section class="logo-setting-card">
+          <div class="logo-preview"><img id="site-logo-preview" src="/assets/logo/logo-white.svg" alt="Logo situs" width="38" height="49" /></div>
+          <div><h2>Logo situs</h2><p>SVG / PNG transparan · Berlaku untuk header, footer, dan dashboard</p></div>
+          <button type="button" class="button button-secondary" data-section="settings">Ubah logo</button>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="editor-dialog" class="editor-dialog">
+      <form id="editor-form" novalidate>
+        <div class="dialog-heading"><div><p class="eyebrow" id="dialog-eyebrow">Edit content</p><h2 id="dialog-title">Edit item</h2></div><button type="button" class="icon-button dialog-close" aria-label="Close">×</button></div>
+        <div id="dialog-fields" class="form-fields"></div>
+        <p class="form-error" id="editor-error" role="alert" aria-live="polite"></p>
+        <div class="dialog-actions"><button type="button" class="button button-secondary dialog-cancel">Batal</button><button type="submit" class="button button-primary">Simpan perubahan</button></div>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/assets/js/admin.js"></script>
+  </body>
+</html>

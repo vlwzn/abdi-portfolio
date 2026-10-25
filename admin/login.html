@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Admin sign in | 5S.MOTION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/admin.css" />
+  </head>
+  <body class="admin-login-page">
+    <main class="login-card">
+      <a class="login-brand" href="/" aria-label="5S.MOTION home">
+        <img src="/assets/logo/logo-white.svg" alt="" width="38" height="49" />
+        <span>STUDIO / ADMIN</span>
+      </a>
+      <p class="eyebrow">Content workspace</p>
+      <h1>Welcome back.</h1>
+      <p class="login-description">Sign in to manage your website content.</p>
+      <form id="login-form">
+        <label>
+          Username
+          <input name="username" autocomplete="username" required maxlength="100" />
+        </label>
+        <label>
+          Password
+          <input name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <p class="form-error" role="alert" aria-live="polite"></p>
+        <button class="button button-primary" type="submit">Sign in</button>
+      </form>
+      <a class="back-link" href="/">← Back to website</a>
+    </main>
+    <script src="/assets/js/admin.js"></script>
+  </body>
+</html>
