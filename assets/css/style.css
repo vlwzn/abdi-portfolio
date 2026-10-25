@@ -58,6 +58,14 @@ button {
   letter-spacing: -0.06em;
 }
 
+.brand img {
+  display: block;
+  width: auto;
+  height: 40px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
