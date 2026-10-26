@@ -78,11 +78,23 @@ button {
 }
 
 .main-nav a {
+  position: relative;
+  padding: 8px 0 7px;
   transition: color 0.2s ease;
 }
 
 .main-nav [aria-current="page"] {
-  color: var(--accent);
+  color: #fabf29;
+}
+
+.main-nav [aria-current="page"]::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #fabf29;
+  content: "";
 }
 
 .main-nav a:hover,
@@ -640,7 +652,7 @@ button {
     justify-content: center;
     gap: 24px;
     padding: 6px 0;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .topbar .contact-btn {
@@ -650,6 +662,6 @@ button {
 
 @media (max-width: 360px) {
   .main-nav {
-    gap: 20px;
+    gap: 12px;
   }
 }
