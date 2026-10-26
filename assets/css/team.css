@@ -23,12 +23,6 @@
   align-items: center;
 }
 
-.team-brand img {
-  display: block;
-  width: auto;
-  height: 40px;
-}
-
 .team-nav {
   display: flex;
   align-items: center;
@@ -687,11 +681,6 @@
     min-height: auto;
     padding: 40px 24px 32px;
     flex-direction: column;
-  }
-
-  .team-footer .team-brand img {
-    width: auto;
-    height: 40px;
   }
 
   .team-footer .social-links {

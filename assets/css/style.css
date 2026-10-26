@@ -1,5 +1,5 @@
 :root {
-  --bg: #0b0b0b;
+  --bg: #0f0f0f;
   --bg-elevated: rgba(255, 255, 255, 0.02);
   --panel: rgba(255, 255, 255, 0.02);
   --panel-strong: rgba(255, 255, 255, 0.04);
@@ -48,7 +48,7 @@ button {
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
-  padding: 0 4px;
+  padding: 0;
   border-bottom: 1px solid transparent;
 }
 
@@ -58,7 +58,8 @@ button {
   letter-spacing: -0.06em;
 }
 
-.brand img {
+.brand img,
+.team-brand img {
   display: block;
   width: auto;
   height: 40px;
@@ -69,13 +70,19 @@ button {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
-  font-size: 13px;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: 48px;
+  font-size: 14px;
   color: var(--muted);
 }
 
 .main-nav a {
   transition: color 0.2s ease;
+}
+
+.main-nav [aria-current="page"] {
+  color: var(--accent);
 }
 
 .main-nav a:hover,
@@ -95,6 +102,15 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.topbar .contact-btn {
+  min-height: 36px;
+  padding: 0 34px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .contact-btn,
@@ -562,10 +578,6 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .main-nav {
-    display: none;
-  }
-
   .hero-copy h1 {
     max-width: 100%;
   }
@@ -612,5 +624,32 @@ button {
 @media (max-width: 700px) {
   .page-shell {
     width: calc(100% - 48px);
+  }
+
+  .topbar {
+    min-height: 72px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .main-nav {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    gap: 24px;
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .topbar .contact-btn {
+    padding: 0 34px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-nav {
+    gap: 20px;
   }
 }
