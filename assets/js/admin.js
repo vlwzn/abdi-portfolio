@@ -228,7 +228,7 @@ if (contentArea) {
     const socials = settings.socials.map((social) => `${social.name} | ${social.url}`).join("\n");
     return `<section class="panel content-form-card"><h2>Pengaturan situs</h2><p>Informasi kontak dan tautan sosial berlaku di halaman publik.</p><form class="content-form" data-content-form="settings"><div class="form-fields">
       ${field("Email kontak", "contactEmail", settings.contactEmail, { type: "email", required: true })}
-      ${field("Logo global", "logoFile", "", { type: "file", accept: ".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp", help: "JPEG, PNG, atau WebP; maksimal 10 MB." })}
+      ${field("Logo global", "logoFile", "", { type: "file", accept: ".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp", help: "Pilih JPG, PNG, atau WebP (maks. 10 MB). SVG belum didukung." })}
       ${field("Tautan sosial (Nama | URL)", "socialsText", socials, { type: "textarea", full: true, help: "Satu tautan per baris. Gunakan URL https:// yang valid.", maxLength: 1500 })}
       </div><div class="dialog-actions"><button class="button button-secondary" type="button" data-cancel-content>Batal</button><button class="button button-primary" type="submit">Simpan pengaturan</button></div></form></section>`;
   };
